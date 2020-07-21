@@ -9,8 +9,8 @@ Original file is located at
 
 from scipy.optimize import linprog
 obj=[-50,-120]
-lhs_ieq=[[7000,2000],[10,30]]
-rhs_ieq=[700000,1200]
+lhs_ieq=[[10,30],[7000,2000],[1,1]]
+rhs_ieq=[1200,700000,110]
 bnd=[(0,float("inf")),(0,float("inf"))]
 opt=linprog(c=obj,A_ub=lhs_ieq,b_ub=rhs_ieq,bounds=bnd,method="Simplex")
 opt
